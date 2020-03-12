@@ -5,8 +5,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 
-// const notesRouter = require('./Notes/notes-router');
-// const foldersRouter = require('./Folders/folders-router');
+const notesRouter = require('./Notes/notes-router');
+const foldersRouter = require('./Folders/folders-router');
 const errorHandler = require('./error-handler');
 const app = express();
 
@@ -23,7 +23,5 @@ app.use(notesRouter);
 app.use(foldersRouter);
 
 app.use(errorHandler);
-app.get('/ping', (req, res) => {
-  res.send('Pong!')
-});
+
 module.exports = app;
