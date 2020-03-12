@@ -61,7 +61,7 @@ notesRouter
       .catch(next);
   })
   .get((req, res) => {
-    res.json(serializeNote(res.note)); //!! Bookmarks api had no res. in front
+    res.json(serializeNote(res.note)); 
   })
   .delete((req, res, next) => {
     const { id } = req.params;

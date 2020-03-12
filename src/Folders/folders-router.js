@@ -58,7 +58,7 @@ foldersRouter
       .catch(next);
   })
   .get((req, res) => {
-    res.json(serializeFolder(res.folder)); //!! Bookmarks api had no res. in front
+    res.json(serializeFolder(res.folder)); 
   })
   .delete((req, res, next) => {
     const { id } = req.params;
